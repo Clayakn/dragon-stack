@@ -1,0 +1,64 @@
+[
+    {
+        "type": "scaleColor",
+        "values": [
+            "black",
+            "blue",
+            "bronze",
+            "brown",
+            "gray",
+            "green",
+            "gold",
+            "purple",
+            "rainbow",
+            "red",
+            "silver",
+            "white",
+            "yellow"
+        ]
+    },
+    {
+        "type": "personality",
+        "values": [
+            "adventurous",
+            "aggressive",
+            "aloof",
+            "chaotic",
+            "curious",
+            "cunning",
+            "friendly",
+            "intelligent",
+            "lazy",
+            "narcissistic",
+            "peaceful",
+            "playful",
+            "skittish"
+        ]
+    },
+    {
+        "type": "power",
+        "values": [
+            "acid generation",
+            "camouflage",
+            "decelerated-aging",
+            "enhanced-speed",
+            "enhanced-strength",
+            "fire-breathing",
+            "healing",
+            "heightened-senses",
+            "hypnosis",
+            "ice aura",
+            "magic immunity",
+            "shapeshifting"
+        ]
+    },
+    {
+        "type": "size",
+        "values": [
+            "small",
+            "medium",
+            "large",
+            "enormous"
+        ]
+    }
+]
