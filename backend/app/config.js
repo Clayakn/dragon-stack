@@ -1,3 +1,4 @@
+// Timer for how often generation will be created
 const SECONDS = 1000;
 const MINUTES = SECONDS * 60;
 const HOURS = MINUTES * 60;
