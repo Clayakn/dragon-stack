@@ -3,6 +3,7 @@ const TRAITS = require('../../data/traits');
 
 // Use default properties when data isnt given by user
 const DEFAULT_PROPERTIES = {
+    dragonId: undefined,
     nickname: 'unnamed',
     generationId: undefined,
     // if write birthdate: new Date(), then will get date when object is created, not when new instance of dragon is created, use get to get new date when needed
@@ -28,7 +29,8 @@ const DEFAULT_PROPERTIES = {
 // all new instances of Dragon will be built off this class
 class Dragon {
     // if object is undefined, default will be empty object
-    constructor({ birthdate, nickname, traits, generationId } = {}) {
+    constructor({ dragonId, birthdate, nickname, traits, generationId } = {}) {
+        this.dragonid = dragonId || DEFAULT_PROPERTIES.dragonId;
         this.birthdate = birthdate || DEFAULT_PROPERTIES.birthdate;
         this.nickname = nickname || DEFAULT_PROPERTIES.nickname;
         this.traits = traits || DEFAULT_PROPERTIES.randomTraits;
