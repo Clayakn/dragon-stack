@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 
 const GenerationEngine = require('./generation/engine');
 
@@ -13,10 +14,12 @@ const engine = new GenerationEngine();
 // Pass engine to all api routes, api routes can't require them since index.js is requiring routes
 app.locals.engine = engine;
 
+app.use(cors({ origin: 'http://localhost:1234' }));
 
 // Everytime certain endpoint is hit, go to certain route
 app.use('/dragon', dragonRouter);
 app.use('/generation', generationRouter);
+
 
 // Error Handler 
 app.use((err, req, res, next) => {
