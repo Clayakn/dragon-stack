@@ -10,7 +10,6 @@
             "green",
             "gold",
             "purple",
-            "rainbow",
             "red",
             "silver",
             "white",
@@ -50,6 +49,15 @@
             "ice aura",
             "magic immunity",
             "shapeshifting"
+        ]
+    },
+    {
+        "type": "build",
+        "values": [
+           "slender",
+           "stocky",
+           "sporty",
+           "skinny"
         ]
     },
     {
