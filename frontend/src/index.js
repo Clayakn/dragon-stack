@@ -4,29 +4,30 @@ import Generation from './components/Generation';
 import Dragon from './components/Dragon';
 
 // Redux
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { generationReducer } from './reducers';
-import { generationActionCreator } from './actions/generation';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 
 // CSS 
 import './index.css';
 
 
-const store = createStore(generationReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store = createStore(
+    generationReducer, 
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    applyMiddleware(thunk)
+);
 
-store.subscribe(() => console.log('store state update', store.getState()));
 
-fetch('http://localhost:4001/generation')
-    .then(response => response.json())
-    .then(json => {
-        store.dispatch(generationActionCreator(json.generation))
-    })
 
 render(
+    <Provider store={store}>
     <div>
         <h2>Dragon Stack from React</h2>
         <Generation />
         <Dragon />
-    </div>,
+    </div>
+    </Provider>,
     document.getElementById('root')
 );

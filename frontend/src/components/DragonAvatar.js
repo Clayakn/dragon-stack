@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { skinny, slender, sporty, stocky } from '../assets';
 
+
+// Styling to Add to Dragon accordingly to properties stored in DB
 const propertyMap = {
     scaleColor: {
         black: '#263238', 
