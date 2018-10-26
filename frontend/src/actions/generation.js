@@ -18,7 +18,7 @@ export const fetchGeneration = () => dispatch => {
               });
           }
         })
-        .catch(error => dipatch({ 
+        .catch(error => dispatch({ 
             type: GENERATION.FETCH_ERROR,
             message: error.message
         }));

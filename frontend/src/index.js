@@ -5,7 +5,7 @@ import Dragon from './components/Dragon';
 
 // Redux
 import { createStore, applyMiddleware } from 'redux';
-import { generationReducer } from './reducers';
+import  rootReducer  from './reducers';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
@@ -14,7 +14,7 @@ import './index.css';
 
 
 const store = createStore(
-    generationReducer, 
+    rootReducer, 
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
     applyMiddleware(thunk)
 );
