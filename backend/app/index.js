@@ -5,9 +5,9 @@ const bodyParser = require('body-parser');
 const GenerationEngine = require('./generation/engine');
 
 // API Routes
+const accountRouter = require('./api/account');
 const dragonRouter = require('./api/dragon');
 const generationRouter = require('./api/generation');
-
 
 const app = express();
 const engine = new GenerationEngine();
@@ -19,6 +19,7 @@ app.use(cors({ origin: 'http://localhost:1234' }));
 app.use(bodyParser.json());
 
 // Everytime certain endpoint is hit, go to certain route
+app.use('/account', accountRouter);
 app.use('/dragon', dragonRouter);
 app.use('/generation', generationRouter);
 
